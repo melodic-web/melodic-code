@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodic</title>
+    <link rel="icon" href="img/logo.svg" type="image/x-icon">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body class="bg-dark">
+
+    <header class="navbar navbar-top container">
+        <div class="container">
+            <a class="navbar-brand text-light title" href="index.html">
+                <img src="./img/logo.svg" alt="Logo del sitio web Melodic" width="30" height="24" class="d-inline-block">
+                Melodic
+            </a>
+            <div class="container-search d-flex">
+                <img class="icon" alt="Icono de buscar" style="margin-top: 4px;" src="./img/search-icon.svg">
+                <input class="form-control me-2 input-search" type="search" placeholder="Descubre tu próxima melodía..." aria-label="Search">
+           </div> 
+        </div>
+    </header>
+  
+    <div class="d-flex navbar-lateral navbar-lateral-close" id="navbarLateral">
+        <ul class="flex-colum navbar-lateral-list">
+            <a class="navbar-lateral-header" id="headerToggle">
+            <img class="icon" alt="Icono de menu lateral" src="./img/menu-icon.svg">
+            <span class="item-text">Menu</span>
+            </a>
+            <li class="navbar-lateral-list-item">
+                <a id="navHome">
+                    <img class="icon" alt="Icono de inicio" src="./img/home-icon.svg">
+                    <span class="item-text">Inicio</span>
+                </a>
+            </li>
+            <li class="navbar-lateral-list-item">
+                <a id="navFavoritos">
+                    <img class="icon" alt="Icono de favoritos" src="./img/favorite-icon.svg">
+                    <span class="item-text">Favoritos</span>
+                </a>
+            </li>
+        </ul>
+    </div> 
+
+    <div class="d-flex albumes-lateral albumes-lateral-close" id="albumesLateral">
+        <ul style="padding-left: 0px;">
+            <a class="albumes-lateral-header" id="toggleAlbumesLateral">
+                <img class="icon" alt="Icono de albumes" src="./img/album-icon.svg">
+                <span class="header-text">Albumes</span>
+            </a>
+            <div class="album-lateral-list-scroll albumes-lateral-list" id="listAlbumes">
+                <li class="album-lateral-list-item" onclick="playAlbumLateral(this)">
+                    <a>
+                        <img class="portada-album-mini" alt="Portada del album Nombre Album 1" src="./img/image 1.png">
+                        <div class="info-album-container d-flex">
+                            <span>Nombre Album 1</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbumLateralPlay(this)" class="btn-hover-action"><img src="./img/play-icon.svg"></button>
+                    </a>
+                </li>
+                <li class="album-lateral-list-item" onclick="playAlbumLateral(this)">
+                    <a>
+                        <img class="portada-album-mini"  alt="Portada del album Nombre Album 2" src="./img/image 2.png">
+                        <div class="info-album-container d-flex">
+                            <span>Nombre Album 2</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbumLateralPlay(this)" class="btn-hover-action"><img src="./img/play-icon.svg"></button>
+
+                    </a>
+                </li>
+                <li class="album-lateral-list-item" onclick="playAlbumLateral(this)">
+                    <a>
+                        <img class="portada-album-mini"  alt="Portada del album Nombre Album 3" src="./img/image 3.png">
+                        <div class="info-album-container d-flex">
+                            <span>Nombre Album 3</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbumLateralPlay(this)" class="btn-hover-action"><img src="./img/play-icon.svg"></button>
+                    </a>
+                </li>
+                <li class="album-lateral-list-item" onclick="playAlbumLateral(this)">
+                    <a>
+                        <img class="portada-album-mini"  alt="Portada del album Nombre Album 4" src="./img/image 4.png">
+                        <div class="info-album-container d-flex">
+                            <span>Nombre Album 4</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbumLateralPlay(this)" class="btn-hover-action"><img src="./img/play-icon.svg"></button>
+                    </a>
+                </li>
+                <li class="album-lateral-list-item" onclick="playAlbumLateral(this)">
+                    <a>
+                        <img class="portada-album-mini"  alt="Portada del album Nombre Album 5" src="./img/image 5.png">
+                        <div class="info-album-container d-flex">
+                            <span>Nombre Album 5</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbumLateralPlay(this)" class="btn-hover-action"><img src="./img/play-icon.svg"></button>
+                    </a>
+                </li>
+                <li class="album-lateral-list-item" onclick="playAlbumLateral(this)">
+                    <a>
+                        <img class="portada-album-mini"  alt="Portada del album Nombre Album 6" src="./img/image 6.png">
+                        <div class="info-album-container d-flex">
+                            <span>Nombre Album 6</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbumLateralPlay(this)" class="btn-hover-action"><img src="./img/play-icon.svg"></button>
+                    </a>
+                </li>
+                <li class="album-lateral-list-item" onclick="playAlbumLateral(this)">
+                    <a>
+                        <img class="portada-album-mini"  alt="Portada del album Nombre Album 7" src="./img/image 7.png">
+                        <div class="info-album-container d-flex">
+                            <span>Nombre Album 7</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbumLateralPlay(this)" class="btn-hover-action"><img src="./img/play-icon.svg"></button>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+
+    <div class="content-body">
+        <div class="content-list-song show-content" id="songsContent">
+            <h2>Canciones</h2>
+    
+                <div class="row-songs">
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini"  alt="Portada de la cancion Nombre cancion 1" src="./img/imagen-song-1.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 1</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 2" src="./img/imagen-song-2.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 2</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 3" src="./img/imagen-song-3.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 3</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 4" src="./img/imagen-song-4.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 4</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                    
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 5" src="./img/imagen-song-5.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 5</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                    
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 6" src="./img/imagen-song-6.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 6</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 7" src="./img/imagen-song-7.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 7</span>
+                                <span>Nombre artista</span>
+                            </div>      
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>              
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 8" src="./img/imagen-song-8.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 8</span>
+                                <span>Nombre artista</span>
+                            </div>          
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>              
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 9" src="./img/imagen-song-9.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 9</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 10" src="./img/imagen-song-10.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 10</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 11" src="./img/imagen-song-11.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 11</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 12" src="./img/imagen-song-12.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 12</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 13" src="./img/imagen-song-13.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 13</span>
+                                <span>Nombre artista</span>
+                            </div>     
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                   
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 14" src="./img/imagen-song-14.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 14</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 15" src="./img/imagen-song-15.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 15</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 16" src="./img/imagen-song-16.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 16</span>
+                                <span>Nombre artista</span>
+                            </div>                 
+                            <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>       
+                        </a>
+                    </div>
+                </div> 
+        </div>
+
+        <div class="content-list-song" id="favoritesContent">
+            <h2>Canciones Favoritas</h2>
+    
+                <div class="row-songs">
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 1" src="./img/imagen-song-1.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 1</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 2" src="./img/imagen-song-2.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 2</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 3" src="./img/imagen-song-3.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 3</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 4" src="./img/imagen-song-4.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 4</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                    
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 5" src="./img/imagen-song-5.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 5</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                    
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 6" src="./img/imagen-song-6.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 6</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 7" src="./img/imagen-song-7.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 7</span>
+                                <span>Nombre artista</span>
+                            </div>      
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>              
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 8" src="./img/imagen-song-8.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 8</span>
+                                <span>Nombre artista</span>
+                            </div>          
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>              
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 9" src="./img/imagen-song-9.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 9</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 10" src="./img/imagen-song-10.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 10</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 11" src="./img/imagen-song-11.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 11</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 12" src="./img/imagen-song-12.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 12</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 13" src="./img/imagen-song-13.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 13</span>
+                                <span>Nombre artista</span>
+                            </div>     
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                   
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 14" src="./img/imagen-song-14.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 14</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 15" src="./img/imagen-song-15.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 15</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 16" src="./img/imagen-song-16.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 16</span>
+                                <span>Nombre artista</span>
+                            </div>                 
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>       
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 1" src="./img/imagen-song-1.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 1</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 2" src="./img/imagen-song-2.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 2</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 3" src="./img/imagen-song-3.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 3</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 4" src="./img/imagen-song-4.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 4</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                    
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 5" src="./img/imagen-song-5.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 5</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                    
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 6" src="./img/imagen-song-6.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 6</span>
+                                <span>Nombre artista</span>
+                            </div>
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 7" src="./img/imagen-song-7.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 7</span>
+                                <span>Nombre artista</span>
+                            </div>      
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>              
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 8" src="./img/imagen-song-8.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 8</span>
+                                <span>Nombre artista</span>
+                            </div>          
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>              
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 9" src="./img/imagen-song-9.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 9</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 10" src="./img/imagen-song-10.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 10</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 11" src="./img/imagen-song-11.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 11</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 12" src="./img/imagen-song-12.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 12</span>
+                                <span>Nombre artista</span>
+                            </div>  
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 13" src="./img/imagen-song-13.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 13</span>
+                                <span>Nombre artista</span>
+                            </div>     
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                   
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 14" src="./img/imagen-song-14.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 14</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 15" src="./img/imagen-song-15.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 15</span>
+                                <span>Nombre artista</span>
+                            </div>   
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                        </a>
+                    </div>
+                    <div class="col-song">
+                        <a class="item-song">
+                            <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 16" src="./img/imagen-song-16.png">
+                            <div class="info-song-container d-flex">
+                                <span>Nombre Cancion 16</span>
+                                <span>Nombre artista</span>
+                            </div>                 
+                            <button onclick="playSongFavorite(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>       
+                        </a>
+                    </div>
+                </div> 
+        </div>
+
+        <div class="content-list-albumes show-content" id="albumesContent">
+            <h2>Albumes</h2>
+    
+            <div class="row-albumes row-albumes-scroll">
+                <div class="col-album">
+                    <a class="item-album">
+                        <img class="portada-album"  alt="Portada del album Nombre Album 1" src="./img/imagen-album-1.png">
+                        <div class="info-list-album--container d-flex">
+                            <span>Nombre Album 1</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbum(this)" class="btn-hover-action-album"><img src="./img/play-icon.svg"></button>       
+                    </a>
+                </div>
+                <div class="col-album">
+                    <a class="item-album">
+                        <img class="portada-album"  alt="Portada del album Nombre Album 2" src="./img/imagen-album-2.png">
+                        <div class="info-list-album--container d-flex">
+                            <span>Nombre Album 2</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbum(this)" class="btn-hover-action-album"><img src="./img/play-icon.svg"></button>       
+                    </a>
+                </div>
+                <div class="col-album">
+                    <a class="item-album">
+                        <img class="portada-album" alt="Portada del album Nombre Album 3" src="./img/imagen-album-3.png">
+                        <div class="info-list-album--container d-flex">
+                            <span>Nombre Album 3</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbum(this)" class="btn-hover-action-album"><img src="./img/play-icon.svg"></button>       
+                    </a>
+                </div>
+                <div class="col-album">
+                    <a class="item-album">
+                        <img class="portada-album" alt="Portada del album Nombre Album 4" src="./img/imagen-album-4.png">
+                        <div class="info-list-album--container d-flex">
+                            <span>Nombre Album 4</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbum(this)" class="btn-hover-action-album"><img src="./img/play-icon.svg"></button>       
+                    </a>
+                </div>
+                <div class="col-album">
+                    <a class="item-album">
+                        <img class="portada-album"  alt="Portada del album Nombre Album 5" src="./img/imagen-album-5.png">
+                        <div class="info-list-album--container d-flex">
+                            <span>Nombre Album 5</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbum(this)" class="btn-hover-action-album"><img src="./img/play-icon.svg"></button>       
+                    </a>
+                </div>
+                <div class="col-album">
+                    <a class="item-album">
+                        <img class="portada-album" alt="Portada del album Nombre Album 6" src="./img/imagen-album-6.png">
+                        <div class="info-list-album--container d-flex">
+                            <span>Nombre Album 6</span>
+                            <span>Nombre artista</span>
+                        </div>
+                        <button onclick="playAlbum(this)" class="btn-hover-action-album"><img src="./img/play-icon.svg"></button>       
+                    </a>
+                </div>
+            </div> 
+        </div>
+
+        <div class="album-data-content" id="albumDataContent">
+            <div class="album-title-content">
+                <img class="album-portada"  alt="Portada grande del album" id="albumPortada" src="./img/imagen-album-1.png">
+                <div class="title-album">
+                    <h2 id="albumName">Nombre Album 1</h2>
+                    <h4 id="artistName">Nombre artista</h4>
+                </div>
+            </div>
+
+            <div class="content-list-song song-album d-flex">
+                <h2>Canciones</h2>
+        
+                    <div class="row-songs">
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 1" src="./img/imagen-song-1.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 1</span>
+                                    <span>Nombre artista</span>
+                                </div>
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 2" src="./img/imagen-song-2.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 2</span>
+                                    <span>Nombre artista</span>
+                                </div>  
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 3" src="./img/imagen-song-3.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 3</span>
+                                    <span>Nombre artista</span>
+                                </div>
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 4" src="./img/imagen-song-4.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 4</span>
+                                    <span>Nombre artista</span>
+                                </div>
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                    
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 5" src="./img/imagen-song-5.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 5</span>
+                                    <span>Nombre artista</span>
+                                </div>
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                    
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 6" src="./img/imagen-song-6.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 6</span>
+                                    <span>Nombre artista</span>
+                                </div>
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 7" src="./img/imagen-song-7.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 7</span>
+                                    <span>Nombre artista</span>
+                                </div>      
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>              
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 8" src="./img/imagen-song-8.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 8</span>
+                                    <span>Nombre artista</span>
+                                </div>          
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>              
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 9" src="./img/imagen-song-9.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 9</span>
+                                    <span>Nombre artista</span>
+                                </div>  
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 10" src="./img/imagen-song-10.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 10</span>
+                                    <span>Nombre artista</span>
+                                </div>   
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 11" src="./img/imagen-song-11.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 11</span>
+                                    <span>Nombre artista</span>
+                                </div>   
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 12" src="./img/imagen-song-12.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 12</span>
+                                    <span>Nombre artista</span>
+                                </div>  
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                      
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 13" src="./img/imagen-song-13.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 13</span>
+                                    <span>Nombre artista</span>
+                                </div>     
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                   
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 14" src="./img/imagen-song-14.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 14</span>
+                                    <span>Nombre artista</span>
+                                </div>   
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 15" src="./img/imagen-song-15.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 15</span>
+                                    <span>Nombre artista</span>
+                                </div>   
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>                     
+                            </a>
+                        </div>
+                        <div class="col-song">
+                            <a class="item-song">
+                                <img class="portada-song-mini" alt="Portada de la cancion Nombre cancion 16" src="./img/imagen-song-16.png">
+                                <div class="info-song-container d-flex">
+                                    <span>Nombre Cancion 16</span>
+                                    <span>Nombre artista</span>
+                                </div>                 
+                                <button onclick="playSong(this)" class="btn-hover-action-song"><img src="./img/play-icon.svg"></button>       
+                            </a>
+                        </div>
+                    </div> 
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="content-player">
+        <img class="imgen-player" id="imgPlayer" alt="Portada de la cancion que se encuentra reproducciendo" src="img/imagen-player-1.png">
+
+        <div class="content-info-player d-flex">
+            <span id="songName">Nombre cancion</span>
+            <span id="artistNameSong">Nombre artista</span>
+        </div>
+
+        <img onclick="favoriteCheck(this)" id="favorite" class="favorite-icon-player" src="./img/favorite-uncheck-icon.svg">
+
+        <div class="container-actions-player">
+            <div class="container-actions">
+                <button class="action-btn" id="ramdonAction">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="black" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.60404 11.9508C7.16168 12.822 6.69325 13.6683 6.13436 14.4295C4.81762 16.2227 3.09927 16.6989 1.24532 16.5769C-0.419189 16.4672 -0.41102 19.8098 1.24532 19.9188C4.7285 20.1479 7.19057 18.1996 9.15071 14.8829C8.82793 14.3381 8.52965 13.7895 8.2567 13.2607C8.03206 12.8263 7.81473 12.3821 7.60404 11.9508ZM10.9667 9.29136C11.1457 9.65557 11.3224 10.0137 11.5007 10.3648C11.8275 9.78067 12.1761 9.21682 12.5683 8.69252C13.5585 7.3693 14.6867 6.82559 15.9253 6.67175C15.8467 6.79432 15.7704 6.91914 15.6912 7.04109C15.2387 7.73729 15.1624 8.71918 15.6912 9.40414C16.1565 10.0067 17.0631 10.1018 17.5165 9.40414C18.2148 8.33016 18.8819 7.22215 19.5801 6.14818C20.0349 5.55649 20.209 4.57246 19.6461 3.7831L17.3231 0.524729C16.1919 -1.06168 14.371 1.30711 15.4977 2.88778L15.7993 3.31072C14.5322 3.42811 13.3121 3.84543 12.1855 4.79341C11.3438 5.50181 10.636 6.41222 10.0045 7.40969C10.1314 7.63992 10.258 7.87386 10.3827 8.1181C10.582 8.50858 10.7775 8.90666 10.9667 9.29136Z"/>
+                        <path d="M17.517 10.5958C17.2983 10.2599 16.9748 10.1077 16.6459 10.1077C16.2924 10.1077 15.9326 10.2839 15.6916 10.5958C15.1628 11.281 15.2391 12.2628 15.6916 12.9588C15.7708 13.0809 15.8472 13.206 15.9257 13.3285C14.6871 13.1748 13.5587 12.6307 12.5687 11.3076C12.0055 10.5549 11.5303 9.72258 11.0841 8.86196C10.6517 8.02806 10.247 7.16727 9.81764 6.32538C9.73557 6.16456 9.65127 6.01016 9.56746 5.85451C7.64177 2.27821 5.23349 0.0629883 1.79402 0.0629883C1.61423 0.0629883 1.4313 0.0691198 1.24573 0.081101C-0.383672 0.188313 -0.417867 3.42543 1.16652 3.42543C1.19259 3.42543 1.21884 3.42441 1.24573 3.42273C1.42466 3.41103 1.60184 3.4049 1.7779 3.4049C3.42716 3.4049 4.9449 3.95012 6.13459 5.57056C6.86602 6.56703 7.44321 7.70839 8.00844 8.86196C8.27653 9.40899 8.54218 9.95821 8.82039 10.4969C9.05953 10.9602 9.30754 11.4204 9.56681 11.8691C10.306 13.1476 11.1444 14.3304 12.1856 15.2068C13.3122 16.1548 14.5323 16.572 15.7993 16.6892L15.4978 17.1122C14.6335 18.3245 15.5028 20 16.4655 20C16.758 20 17.0594 19.8449 17.3231 19.4753L19.6464 16.2171C20.2092 15.4276 20.0351 14.4436 19.5804 13.852C18.8823 12.7774 18.2153 11.6701 17.517 10.5958Z"/>
+                    </svg>                        
+                </button>
+                <div class="actions">
+                    <button class="action-btn" onclick="beforeTrack()">
+                        <img src="img/before-icon.svg">
+                    </button>
+                    <button class="action-btn" onclick="playPause(this)">
+                        <img src="img/pause-icon.svg">
+                    </button>
+                    <button class="action-btn" onclick="nextTrack()">
+                        <img src="img/next-icon.svg">
+                    </button>
+                </div>
+                <button class="action-btn" id="repeatAction">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="black" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.9504 6.25293H10.0006C8.91285 6.2526 7.8405 6.48694 6.87177 6.93669C5.90303 7.38644 5.06558 8.03876 4.42827 8.84C3.79096 9.64124 3.37198 10.5685 3.2058 11.5456C3.03961 12.5227 3.13096 13.5217 3.47233 14.4604C3.68727 15.0533 3.5948 15.7269 3.10992 16.1676L3.00245 16.2641C2.30263 16.9002 1.12918 16.79 0.753028 15.9597C0.127612 14.5792 -0.113925 13.08 0.0497726 11.5944C0.21347 10.1089 0.77736 8.68295 1.69158 7.44262C2.6058 6.20228 3.84219 5.18579 5.29141 4.48302C6.74064 3.78026 8.35806 3.41288 10.0006 3.41336H15.9491L14.8606 2.42405C14.7156 2.29219 14.6005 2.13566 14.522 1.96338C14.4435 1.7911 14.4031 1.60645 14.4031 1.41997C14.4031 1.04337 14.5677 0.682198 14.8606 0.415901C15.1536 0.149604 15.551 0 15.9654 0C16.3797 0 16.7771 0.149604 17.0701 0.415901L20.8254 3.82907C20.9704 3.96092 21.0856 4.11745 21.1641 4.28973C21.2426 4.46201 21.283 4.64666 21.283 4.83314C21.283 5.01963 21.2426 5.20428 21.1641 5.37656C21.0856 5.54884 20.9704 5.70537 20.8254 5.83722L17.0701 9.25039C16.925 9.38225 16.7528 9.48684 16.5632 9.5582C16.3737 9.62956 16.1705 9.66629 15.9654 9.66629C15.7602 9.66629 15.557 9.62956 15.3675 9.5582C15.1779 9.48684 15.0057 9.38225 14.8606 9.25039C14.7156 9.11853 14.6005 8.962 14.522 8.78972C14.4435 8.61744 14.4031 8.43279 14.4031 8.24632C14.4031 8.05984 14.4435 7.87519 14.522 7.70291C14.6005 7.53063 14.7156 7.3741 14.8606 7.24224L15.9504 6.25293ZM10.1394 22.576L9.05089 21.5866H14.9994C16.6419 21.5871 18.2594 21.2197 19.7086 20.517C21.1578 19.8142 22.3942 18.7977 23.3084 17.5574C24.2226 16.317 24.7865 14.8911 24.9502 13.4056C25.1139 11.92 24.8724 10.4208 24.247 9.04026C23.8696 8.20997 22.6974 8.09979 21.9975 8.73586L21.8901 8.8324C21.4052 9.27311 21.3115 9.94665 21.5277 10.5396C21.869 11.4783 21.9604 12.4773 21.7942 13.4544C21.628 14.4315 21.209 15.3588 20.5717 16.16C19.9344 16.9612 19.097 17.6136 18.1282 18.0633C17.1595 18.5131 16.0872 18.7474 14.9994 18.7471H9.05089L10.1381 17.7566C10.2902 17.6263 10.412 17.4696 10.4962 17.2957C10.5804 17.1219 10.6254 16.9344 10.6285 16.7445C10.6316 16.5545 10.5927 16.3659 10.5141 16.1899C10.4355 16.0139 10.3189 15.8539 10.1711 15.7196C10.0233 15.5853 9.84738 15.4793 9.6537 15.4079C9.46001 15.3365 9.25253 15.3011 9.04354 15.3039C8.83456 15.3067 8.62831 15.3476 8.43703 15.4242C8.24574 15.5007 8.0733 15.6114 7.92993 15.7496L4.17465 19.1628C4.02955 19.2946 3.91445 19.4512 3.83592 19.6234C3.75739 19.7957 3.71697 19.9804 3.71697 20.1669C3.71697 20.3533 3.75739 20.538 3.83592 20.7103C3.91445 20.8826 4.02955 21.0391 4.17465 21.1709L7.92993 24.5841C8.22292 24.8504 8.62029 25 9.03464 25C9.44899 25 9.84637 24.8504 10.1394 24.5841C10.4323 24.3178 10.5969 23.9566 10.5969 23.58C10.5969 23.2034 10.4323 22.8422 10.1394 22.576Z" />
+                    </svg>
+                </button>
+            </div> 
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider">
+                <div id="totalDuration">03:48</div>
+            </div>
+            <div class="volume-container">
+                <img src="./img/volume-icon.svg">
+                <input type="range" min="1" max="100" value="50" class="seek_slider">
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js" defer></script>
+</body>
+</html>
